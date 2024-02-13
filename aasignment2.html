@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Largest Integer</title>
+</head>
+<body>
+  <h1>Find Largest Integer</h1>
+
+  <label for="firstNumber">Enter the first number:</label>
+  <input type="number" id="firstNumber" placeholder="Enter first number"><br><br>
+
+  <label for="secondNumber">Enter the second number:</label>
+  <input type="number" id="secondNumber" placeholder="Enter second number"><br><br>
+
+  <button onclick="findLargest()">Find Largest</button>
+
+  <p id="result"></p>
+
+  <script>
+    function findLargest() {
+    
+      const firstNumber = parseInt(document.getElementById('firstNumber').value);
+      const secondNumber = parseInt(document.getElementById('secondNumber').value);
+
+      
+      if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+        
+        const largest = Math.max(firstNumber, secondNumber);
+        
+        
+        document.getElementById('result').innerText = `The largest integer is: ${largest}`;
+      } else {
+
+        document.getElementById('result').innerText = 'Please enter valid numbers.';
+      }
+    }
+  </script>
+</body>
+</html>
